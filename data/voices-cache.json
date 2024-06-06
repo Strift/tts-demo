@@ -1,0 +1,52 @@
+{
+  "voices": [
+    {
+      "languageCodes": [
+        "cmn-TW"
+      ],
+      "name": "cmn-TW-Standard-A",
+      "ssmlGender": "FEMALE",
+      "naturalSampleRateHertz": 24000
+    },
+    {
+      "languageCodes": [
+        "cmn-TW"
+      ],
+      "name": "cmn-TW-Standard-B",
+      "ssmlGender": "MALE",
+      "naturalSampleRateHertz": 24000
+    },
+    {
+      "languageCodes": [
+        "cmn-TW"
+      ],
+      "name": "cmn-TW-Standard-C",
+      "ssmlGender": "MALE",
+      "naturalSampleRateHertz": 24000
+    },
+    {
+      "languageCodes": [
+        "cmn-TW"
+      ],
+      "name": "cmn-TW-Wavenet-A",
+      "ssmlGender": "FEMALE",
+      "naturalSampleRateHertz": 24000
+    },
+    {
+      "languageCodes": [
+        "cmn-TW"
+      ],
+      "name": "cmn-TW-Wavenet-B",
+      "ssmlGender": "MALE",
+      "naturalSampleRateHertz": 24000
+    },
+    {
+      "languageCodes": [
+        "cmn-TW"
+      ],
+      "name": "cmn-TW-Wavenet-C",
+      "ssmlGender": "MALE",
+      "naturalSampleRateHertz": 24000
+    }
+  ]
+}
