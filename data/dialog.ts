@@ -21,6 +21,11 @@ export const speakerConfig = {
     voice: 'cmn-TW-Wavenet-A',
     gender: 'FEMALE',
   },
+  Thi: {
+    emoji: '🧧',
+    voice: 'cmn-TW-Wavenet-A',
+    gender: 'FEMALE',
+  },
 }
 
 export const dialog1: DialogLine[] = [
@@ -97,6 +102,125 @@ export const dialog1: DialogLine[] = [
     speaker: 'Marie',
     sentences: [
       '謝謝導遊！',
+    ],
+  },
+]
+
+export const dialog2: DialogLine[] = [
+  {
+    speaker: 'Thi',
+    sentences: [
+      '帥哥，你好。你要什麼？',
+    ],
+  },
+  {
+    speaker: 'Laurent',
+    sentences: [
+      '我要一件台灣的衣服，因為我今年在清華大學唸書。',
+    ],
+  },
+  {
+    speaker: 'Thi',
+    sentences: [
+      '帥哥，你要什麼？',
+    ],
+  },
+  {
+    speaker: 'Florent',
+    sentences: [
+      '我要一件台灣獲釋清華大學的衣服。',
+    ],
+  },
+  {
+    speaker: 'Thi',
+    sentences: [
+      '我有一件清華大學的t-shirt，怎麼樣？',
+    ],
+  },
+  {
+    speaker: 'Florent',
+    sentences: [
+      '很漂亮，我可以是穿一下嗎？',
+    ],
+  },
+  {
+    speaker: 'Thi',
+    sentences: [
+      '可以，可以。',
+    ],
+  },
+  {
+    speaker: 'Florent',
+    sentences: [
+      '我喜歡這件t-shirt，多少錢？',
+    ],
+  },
+  {
+    speaker: 'Thi',
+    sentences: [
+      '一千一百塊。',
+    ],
+  },
+  {
+    speaker: 'Florent',
+    sentences: [
+      '太貴了！請便宜一點。',
+    ],
+  },
+  {
+    speaker: 'Thi',
+    sentences: [
+      '一千一百塊，我在送給你一件t-shirt，好不好？',
+    ],
+  },
+  {
+    speaker: 'Florent',
+    sentences: [
+      '好，可是我要看一下t-shirt。',
+    ],
+  },
+  {
+    speaker: 'Thi',
+    sentences: [
+      '好啊！',
+      '你喜歡這件t-shirt嗎？',
+    ],
+  },
+  {
+    speaker: 'Florent',
+    sentences: [
+      '我不喜歡！',
+    ],
+  },
+  {
+    speaker: 'Thi',
+    sentences: [
+      '沒關係。你喜歡這件t-shirt嗎？',
+    ],
+  },
+  {
+    speaker: 'Florent',
+    sentences: [
+      '很漂亮！可以！',
+    ],
+  },
+  {
+    speaker: 'Thi',
+    sentences: [
+      '太好了！',
+    ],
+  },
+  {
+    speaker: 'Florent',
+    sentences: [
+      '謝謝，再見！',
+    ],
+  },
+  {
+    speaker: 'Thi',
+    sentences: [
+      '給你抽獎！',
+      '再見！',
     ],
   },
 ]
