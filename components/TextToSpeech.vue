@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { TTSConfig } from '~/types';
+import type { TTSConfig } from '~/types'
 
 const props = defineProps<{
   text: string
@@ -16,7 +16,7 @@ const { data, error, pending } = await useFetch('/api/tts', {
   },
 })
 
-const { loadFromBase64URI, play} = useAudio()
+const { loadFromBase64URI, play } = useAudio()
 async function playSound() {
   if (!data.value) {
     return
@@ -27,12 +27,23 @@ async function playSound() {
 </script>
 
 <template>
-  <div>
-    <div>{{ props.text }}</div>
-    <div v-if="error">{{ error }}</div>
-    <div v-else-if="pending">Pending...</div>
-    <div v-else>
-      <button @click="playSound">Play</button>
-    </div>
-  </div>
+  <button
+    class="block text-left"
+    title="Écouter"
+    @click="playSound"
+  >
+    <span v-if="error">
+      ❗
+    </span>
+    <span v-else-if="pending">
+      🔄
+    </span>
+    <span
+      v-else
+      class="bg-blue-600 text-gray-200 px-1 text-sm rounded-md inline-block"
+    >
+      ▶️
+    </span>
+    <span class="ml-2">{{ props.text }}</span>
+  </button>
 </template>

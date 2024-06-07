@@ -1,5 +1,5 @@
-import { synthesizeSpeech } from "../tts"
 import { v4 as uuidv4 } from 'uuid'
+import { synthesizeSpeech } from '../tts'
 
 export default defineEventHandler(async (event) => {
   const id = uuidv4()
@@ -17,9 +17,10 @@ export default defineEventHandler(async (event) => {
     const base64audio = Buffer.from(speech.audioContent!).toString('base64')
     console.log(`Request ${id}: `, '✅ synthesized')
     return {
-      base64audio
+      base64audio,
     }
-  } catch (error) {
+  }
+  catch (error) {
     console.log(`Request ${id}: `, 'error', error)
     throw createError({
       statusCode: 500,
