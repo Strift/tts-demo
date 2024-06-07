@@ -1,12 +1,19 @@
 <script lang="ts" setup>
+import type { TTSConfig } from '~/types';
+
 const props = defineProps<{
   text: string
+  config: TTSConfig
 }>()
 
 const { data, error, pending } = await useFetch('/api/tts', {
   key: props.text,
   method: 'POST',
-  body: JSON.stringify({ text: props.text }),
+  body: {
+    text: props.text,
+    voice: props.config.voice,
+    gender: props.config.gender,
+  },
 })
 
 const { loadFromBase64URI, play} = useAudio()
@@ -25,7 +32,6 @@ async function playSound() {
     <div v-if="error">{{ error }}</div>
     <div v-else-if="pending">Pending...</div>
     <div v-else>
-      <pre>{{ data!.base64audio }}</pre>
       <button @click="playSound">Play</button>
     </div>
   </div>

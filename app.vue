@@ -1,9 +1,17 @@
 <script lang="ts" setup>
-import { chineseText } from './data/dialog';
+import { dialog, speakerConfig } from './data/dialog';
 </script>
 
 <template>
   <div>
-    <TextToSpeech v-for="(text, index) in chineseText" :key="index" :text="text" />
+    <div v-for="(line, index) in dialog" :key="index">
+      <div>{{ line.speaker }}</div>
+      <TextToSpeech
+        v-for="(text, index) in line.sentences"
+        :key="index"
+        :config="speakerConfig[line.speaker]"
+        :text="text"
+      />
+    </div>
   </div>
 </template>

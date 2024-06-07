@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
       })
     }
     console.log(`Request ${id}: `, '🔄 synthesizing: ', body.text)
-    const speech = await synthesizeSpeech(body.text)
+    const speech = await synthesizeSpeech(body.text, { voice: body.voice, gender: body.gender })
     const base64audio = Buffer.from(speech.audioContent!).toString('base64')
     console.log(`Request ${id}: `, '✅ synthesized')
     return {
