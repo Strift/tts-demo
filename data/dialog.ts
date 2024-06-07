@@ -26,7 +26,7 @@ type DialogLine = {
   sentences: string[]
 }
 
-export const dialog: DialogLine[] = [
+export const dialog1: DialogLine[] = [
   {
     speaker: 'Laurent',
     sentences: [
