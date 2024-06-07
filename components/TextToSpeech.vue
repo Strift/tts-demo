@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import pinyin from 'pinyin'
 import type { TTSConfig } from '~/types'
 
 const props = defineProps<{
@@ -24,11 +25,22 @@ async function playSound() {
   loadFromBase64URI(`data:audio/mp3;base64,${data.value.base64audio}`)
   play()
 }
+
+const pinyinText = computed(() => {
+  return pinyin(
+    props.text, {
+      segment: true,
+      group: true,
+    })
+    .join(' ')
+    .replaceAll(' ，', ',')
+    .replaceAll(' 。', '.')
+})
 </script>
 
 <template>
   <button
-    class="block text-left"
+    class="flex text-left"
     title="Écouter"
     @click="playSound"
   >
@@ -44,6 +56,13 @@ async function playSound() {
     >
       ▶️
     </span>
-    <span class="ml-2">{{ props.text }}</span>
+    <div class="ml-2">
+      <div>
+        {{ props.text }}
+      </div>
+      <div class="first-letter:capitalize text-gray-600">
+        {{ pinyinText }}
+      </div>
+    </div>
   </button>
 </template>
