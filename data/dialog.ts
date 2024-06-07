@@ -1,3 +1,5 @@
+import type { DialogLine } from '~/types'
+
 export const speakerConfig = {
   Laurent: {
     emoji: '🦮',
@@ -19,11 +21,6 @@ export const speakerConfig = {
     voice: 'cmn-TW-Wavenet-A',
     gender: 'FEMALE',
   },
-}
-
-type DialogLine = {
-  speaker: keyof typeof speakerConfig
-  sentences: string[]
 }
 
 export const dialog1: DialogLine[] = [
