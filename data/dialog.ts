@@ -1,22 +1,22 @@
 export const speakerConfig = {
   Laurent: {
     emoji: '🦮',
-    voice: 'cmn-TW-Standard-B',
+    voice: 'cmn-TW-Wavenet-B',
     gender: 'MALE',
   },
   Cherif: {
     emoji: '🍵',
-    voice: 'cmn-TW-Standard-A',
-    gender: 'FEMALE',
+    voice: 'cmn-TW-Wavenet-C',
+    gender: 'MALE',
   },
   Florent: {
     emoji: '🕶️',
-    voice: 'cmn-TW-Standard-C',
+    voice: 'cmn-TW-Wavenet-C',
     gender: 'MALE',
   },
   Marie: {
     emoji: '🍹',
-    voice: 'cmn-TW-Standard-A',
+    voice: 'cmn-TW-Wavenet-A',
     gender: 'FEMALE',
   },
 }

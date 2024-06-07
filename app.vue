@@ -3,7 +3,10 @@ import { dialog, speakerConfig } from './data/dialog'
 </script>
 
 <template>
-  <div class="mx-3">
+  <header class="bg-blue-500 text-white text-center py-4 mb-8 sticky top-0">
+    <h1>中文 - Fête des adultes 2ème année</h1>
+  </header>
+  <div class="mx-3 mb-8">
     <div class="space-y-4">
       <div
         v-for="(line, index) in dialog"
